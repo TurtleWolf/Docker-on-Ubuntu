@@ -79,9 +79,9 @@ sudo chmod +x /usr/local/bin/docker-compose
    79  docker container stats
    81  docker container stats
    82  docker network ls
-   83  docker network prune 
+   83  docker network prune
    84  docker network ls
-   85  docker network prune 
+   85  docker network prune
    86  docker network ls
    87  docker network inspect specifics-over --format '{{json .IPAM.Config}}' | jq
    88  docker network inspect bridge --format '{{json .IPAM.Config}}' | jq
