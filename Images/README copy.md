@@ -75,121 +75,6 @@ sudo chmod +x /usr/local/bin/docker-compose
    74  docker container inspect web-server003
    76  sudo apt  install jq
    77  docker container inspect --format '{{json .State}}' web-server003 | jq
-   ## 78
-   79  docker container stats
-   81  docker container stats
-   82  docker network ls
-   83  docker network prune 
-   84  docker network ls
-   85  docker network prune 
-   86  docker network ls
-   87  docker network inspect specifics-over --format '{{json .IPAM.Config}}' | jq
-   88  docker network inspect bridge --format '{{json .IPAM.Config}}' | jq
-   89  docker version
-   90  docker search --limit 5 alpine
-   91  docker search --help
-   98  docker
-   99  docker info
-  100  docker search --limit 5 alpine
-  101  docker network inspect bridge --format '{{json .IPAM.Config}}' | jq
-  102  docker network ls
-  103  docker container stats
-  104  docker container inspect --format '{{json .State}}' web-server003 | jq
-  105  docker container top web-server003
-  106  docker container run --detach --name web-server003 --publish 80:80 nginx
-  107  docker info
-  108  docker container ls -a
-  109  docker container nginx start
-  110  docker container start nginx
-  111  docker container ls -a
-  112  docker container start 2abfac
-  113  history
-  114  clear
-  115  docker system info
-  116  docker system info | grep Swarm
-  117  docker swarm ca
-  118  docker container inspect --format '{{json .State}}' web-server003 | jq
-  119  clear
-  120  docker container stats
-  121  docker network inspect specifics-over --format '{{json .IPAM.Config}}' | jq
-  122  docker network inspect bridge --format '{{json .IPAM.Config}}' | jq
-  123  docker container stats
-  124  docker network inspect specifics-over --format '{{json .IPAM.Config}}' | jq
-  125  docker container stats
-  126  docker system info | grep Swarm
-  127  docker container start 2abfac
-  128  docker container ls -a
-  129  docker info
-  130  docker container top web-server003
-  131  docker search --limit 5 alpine
-  132  docker info
-  133  docker
-  134  docker container ls -a
-  135  docker images ls -a
-  136  docker images
-  137  docker version
-  138  docker info
-  139  docker container run --detach --name web-server003 --publish 80:80 nginx
-  140  docker container ls
-  141  docker images ls -a
-  142  docker container ls -a
-  143  docker network inspect web-server003 --format '{{json .IPAM.Config}}' | jq
-  144  docker container inspect --format '{{json .State}}' web-server003 | jq
-  145  docker container top web-server003
-  146  docker container ls
-  147  docker container ps
-  148  docker container ps -a
-  149  docker ps
-  150  docker container exec -it web-server0003 bash
-  151  docker container exec -it web-server003 bash
-  152  ls
-  153  docker container exec -it web-server003 bash
-  154  history
-  155  code .
-  156  sudo snap install code
-  157  sudo snap install code --classic
-  158  sudo apt update
-  159  docker container exec -it web-server0003 bash
-  160  docker container exec -it web-server003 bash
-  161  docker container run --detach --name web-server003 --publish 80:80 nginx
-  162  ocker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
-  163  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
-  164  ls
-  165  cd /
-  166  ls
-  167  cd /usr/share/
-  168  ls
-  169  cd
-  170  ls
-  171  cd /usr/share/
-  172  ls
-  173  cds ..
-  174  ls
-  175  cd
-  176  ls
-  177  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
-  178  git status
-  179  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
-  180  docker image build -t btrav/nginx-website .
-  181  docker images
-  182  docker container ls
-  183  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
-  192  sudo rm -r ChatSocketIO -f
-  193  ls
-  194  git clone git@github.com:TurtleWolf/ChatSocketIO.git
-  195  git clone https://github.com/TurtleWolf/ChatSocketIO.git
-docker container exec -it web-server0003 bash
-#  cd usr/share/nginx/html
-
-# ChatSocketIO.git
-  git clone https://github.com/TurtleWolf/ChatSocketIO.git
-
-# docker-node-mongo
-  git clone https://github.com/TurtleWolf/docker-node-mongo
-
-# dockerLAMP
-  git clone git@github.com:TurtleWolf/dockerLAMP.git
-
    ```
 
 [![alt text](Images/DockerCookBook2ndEditon.png "Docker CookBook 2nd Edition")](https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example "https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example")
@@ -619,7 +504,6 @@ docker volume inspect mysql-db
 ```bash
 # Run and be able to edit index.html file (local dir should have the Dockerfile and the index.html)
 docker container run  -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
-docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
 ```
 
 ```bash
