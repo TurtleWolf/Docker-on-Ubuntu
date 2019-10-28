@@ -179,24 +179,47 @@ sudo chmod +x /usr/local/bin/docker-compose
   194  git clone git@github.com:TurtleWolf/ChatSocketIO.git
   195  git clone https://github.com/TurtleWolf/ChatSocketIO.git
 docker container exec -it web-server0003 bash
+docker container run --detach --name web-server003 --publish 80:80 --restart=always nginx
 #  cd usr/share/nginx/html
 
+docker container start 2abfac
+docker container run --restart=always -d -i -t 2abfac /bin/bash
+# docker remove all
+docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
+
+
+# docker REACT
+docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html react
+
+# docker DRUPAL
+docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html drupal
+
+# docker WORD PRESS
+docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html wordpress
+
+# docker DRAGGABLE DICE
+docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html draggable dice
+
+# docker Free Code Camp Template
+docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html freecodecampTEMPLATE
+
 # ChatSocketIO.git
-  git clone https://github.com/TurtleWolf/ChatSocketIO.git
+git clone https://github.com/TurtleWolf/ChatSocketIO.git
 
 # docker-node-mongo
-  git clone https://github.com/TurtleWolf/docker-node-mongo
+git clone https://github.com/TurtleWolf/docker-node-mongo
 
 # dockerLAMP
-  git clone git@github.com:TurtleWolf/dockerLAMP.git
-
-   ```
+git clone git@github.com:TurtleWolf/dockerLAMP.git
+```
 
 [![alt text](Images/DockerCookBook2ndEditon.png "Docker CookBook 2nd Edition")](https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example "https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example")
 
 [![alt text](Images/Docker10halfHOuRS.png "https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example")](https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example)
 
-## [Traversy Media Exploring Docker Commands, Help & Tips](https://youtu.be/Kyx2PsuwomE/ "Traversy Media Exploring Docker Commands, Help & Tips")
+## [Traversy Media; Exploring Docker Commands, Help & Tips](https://www.youtube.com/playlist?list=PLETG2T1KvniqIEU_xkadLpugT8nhmNxSR "Traversy Media Exploring Docker Commands, Help & Tips")
+
+## [Traversy Media; Wordpress & Docker](https://gist.github.com/bradtraversy/faa8de544c62eef3f31de406982f1d42 "Traversy Media Wordpress & Docker")
 
 ```bash
 # Show commands & management commands
@@ -679,6 +702,53 @@ docker-compose up -d
 # To cleanup
 docker-compose down
 ```
+
+### Sample compose file (From Drupal)
+
+```bash
+# Drupal with PostgreSQL
+#
+# Access via "http://localhost:8080"
+#   (or "http://$(docker-machine ip):8080" if using docker-machine)
+#
+# During initial Drupal setup,
+# Database type: PostgreSQL
+# Database name: postgres
+# Database username: postgres
+# Database password: example
+# ADVANCED OPTIONS; Database host: postgres
+
+version: '3.1'
+
+services:
+
+  drupal:
+    image: drupal:8-apache-alpine
+    ports:
+      - 8080:80
+    volumes:
+      - /var/www/html/modules
+      - /var/www/html/profiles
+      - /var/www/html/themes
+      # this takes advantage of the feature in Docker that a new anonymous
+      # volume (which is what we're creating here) will be initialized with the
+      # existing content of the image at the same location
+      - /var/www/html/sites
+    restart: always
+
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: example
+    restart: always
+```
+
+README.md
+package-lock.js
+Dockerfile
+DockerIgnore
+DockerCompose.yml
+DockerCompose-Production.yml
 
 [![alt text](Images/DockerQuickStartQuide.png "DockerQuickStartQuide")](https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example "https://subscription.packtpub.com/book/virtualization_and_cloud/9781788626866/3/ch03lvl1sec48/building-an-apache-image-a-dockerfile-example")
 
