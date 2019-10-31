@@ -178,6 +178,87 @@ sudo chmod +x /usr/local/bin/docker-compose
   193  ls
   194  git clone git@github.com:TurtleWolf/ChatSocketIO.git
   195  git clone https://github.com/TurtleWolf/ChatSocketIO.git
+  203  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
+  204  docker container start 2abfac
+  205  exit
+  206  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
+  207  docker container run --restart=always -d -i -t 2abfac /bin/bash
+  208  docker container
+  209  docker container ls
+  210  docker container run --detach --name web-server003 --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
+  211  docker container rm -f $(docker container ls -aq)
+  212  docker container ls
+  213  docker images ls
+  214  docker image ls
+  215  docker container run --restart=always -d -i -t nginx /bin/bash
+  216  docker image ls
+  217  docker container ls
+  218  docker container rm -f $(docker container ls -aq)
+  219  docker container run --detach --name web-server003 --restart=always --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
+  220  docker container ls
+  221  docker container rm -f $(docker container ls -aq)
+  222  sudo docker container run --detach --name web-server003 --restart=always --publish 80:80 -v $(pwd):/usr/share/nginx/html nginx
+  223  docker container rm -f $(docker container ls -aq)
+  224  ls
+  225  docker container run --restart=always -d -i -t ubuntu /bin/bash
+  226  docker container ls
+  227  docker container rm -f $(docker container ls -aq)
+  228  docker container run --restart=always -d -i -t nginx /bin/bash
+  229  docker container rm -f $(docker container ls -aq)
+  230  docker container run --restart=always -d -i -t --publish 80:80 nginx /bin/bash
+  231  docker container ls
+  232  docker container rm -f $(docker container ls -aq)
+  233  docker container ls
+  234  docker container run --detach --name web-server003 --publish 80:80 nginx
+  235  docker container run --detach --name web-server003 --publish 80:80 --restart=always nginx
+  236  docker container rm -f $(docker container ls -aq)
+  237  docker container run --detach --name web-server003 --publish 80:80 --restart=always nginx
+  238  docker container ls
+  239  docker container info
+  240  docker container stats
+  241  docker container ls
+  242  docker container ls -a
+  243  docker container ls info
+  244  docker container inspect --format '{{json .State}}' web-server003 | jq
+  245  docker network inspect web-server003 --format '{{json .IPAM.Config}}' | jq
+  246  sudo apt update
+  247  sudo apt upgrade
+  248  sudo reboot
+  249  docker container ls info
+  250  docker network inspect web-server003 --format '{{json .IPAM.Config}}' | jq
+  251  docker container inspect --format '{{json .State}}' web-server003 | jq
+  252  docker container run --help
+  253  docker container --restart string
+  254  docker container --restart help
+  255  docker container run --help
+  256  docker container ls
+  257  docker container inspect web-server003
+  258  docker container inspect \     --format='{{.NetworkSettings.IPAddress}}'  $ID172.17.0.2
+  259  docker container ls
+  260  docker container inspect \     --format='{{.NetworkSettings.IPAddress}}'  $IDweb-server003
+  261  docker container inspect --help
+  262  docker container inspect web-server003
+  263  docker container inspect web-server003 | grep RestartPolicy
+  264  docker container inspect web-server003 | grep "RestartPolicy": {
+  265  docker container inspect web-server003 | grep RestartPolicy
+  266  docker container inspect --help
+  267  docker container inspect web-server003 -f RestartPolicy
+  268  docker container inspect web-server003
+  269  docker container inspect web-server003 "RestartPolicy": {
+  270  docker container inspect web-server003 RestartPolicy
+  271  docker container inspect web-server003
+  272  docker image ls
+  273  docker container ls
+  274  docker container inspect web-server003 | jq "."
+  275  docker container inspect --format '{{json. .Config.Labels))' web-server003 | jq "."
+  276  docker container inspect --format '{{json. .Config.Labels))' web-server003 | jq "."
+  277  docker container inspect --format `{{json. .Config.Labels))` web-server003 | jq "."
+  278  docker container inspect --format '{{json. .Config.Labels))' web-server003 | jq "."
+  279  docker container inspect --format '{{json. .Config.Labels))' web-server003 | jq
+  280  docker info
+  281  docker images
+  282  docker-machine  
+
 docker container exec -it web-server0003 bash
 docker container run --detach --name web-server003 --publish 80:80 --restart=always nginx
 #  cd usr/share/nginx/html
