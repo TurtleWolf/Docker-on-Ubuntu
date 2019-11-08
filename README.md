@@ -1,6 +1,6 @@
 # [ChatSocketIO Draggable Dice DockerFile React AWS](http://ec2-52-87-220-90.compute-1.amazonaws.com/ "NGINX Docker AWS")
 
-## Intall Docker on Ubuntu 18.04
+## Install Docker on Ubuntu 18.04
 
 ``` bash
 # update apt-get libraries
