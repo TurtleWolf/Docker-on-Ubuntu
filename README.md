@@ -838,3 +838,14 @@ DockerCompose-Production.yml
 [![alt text](Images/MasteringDockerThirdEdition.png "Mastering Docker Third Edition")](https://subscription.packtpub.com/book/virtualization_and_cloud/9781789616606/13/ch13lvl1sec116/what-does-production-look-like)
 
 ## [How to create a docker-based LAMP stack using docker-compose on Ubuntu 18.04 Bionic Beaver Linux ](https://linuxconfig.org/how-to-create-a-docker-based-lamp-stack-using-docker-compose-on-ubuntu-18-04-bionic-beaver-linux "How to create a docker-based LAMP stack using docker-compose on Ubuntu 18.04 Bionic Beaver Linux ")
+
+``` bash
+ 1727  sudo apt purge nodejs
+ 1729  sudo apt remove nodejs
+ 1741  sudo npm uninstall -g create-react-app
+```
+
+``` bash
+ 1739  sudo apt install nodejs
+       sudo npm install -g create-react-app@3.0.1
+```
